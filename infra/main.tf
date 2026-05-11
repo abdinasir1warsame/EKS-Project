@@ -15,5 +15,10 @@ module "eks" {
   source             = "./modules/eks"
   cluster_name       = var.cluster_name
   cluster_version    = var.cluster_version
+  node_group_name    = var.node_group_name
+  desired_size       = var.desired_size
+  max_size           = var.max_size
+  min_size           = var.min_size
+  max_unavailable    = var.max_unavailable
 }
 
