@@ -43,3 +43,14 @@ variable "min_size" {
 variable "max_unavailable" {
   type = number
 }
+
+variable "node_instance_type" {
+  type = string
+
+}
+variable "node_capacity_type" {
+  type = string
+}
+variable "node_ami_type" {
+  type = string
+}

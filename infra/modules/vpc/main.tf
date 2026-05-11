@@ -5,7 +5,7 @@ resource "aws_vpc" "this" {
   enable_dns_hostnames = true
 
   tags = {
-    Name = var.project
+    Name = "${var.project}-vpc"
   }
 }
 resource "aws_internet_gateway" "this" {
