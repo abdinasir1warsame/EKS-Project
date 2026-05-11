@@ -9,3 +9,11 @@ module "vpc" {
 
   source = "./modules/vpc"
 }
+module "eks" {
+  private_subnet_ids = module.vpc.private_subnet_ids
+  public_subnet_ids  = module.vpc.public_subnet_ids
+  source             = "./modules/eks"
+  cluster_name       = var.cluster_name
+  cluster_version    = var.cluster_version
+}
+
